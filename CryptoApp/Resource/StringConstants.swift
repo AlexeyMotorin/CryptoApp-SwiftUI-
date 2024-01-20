@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct StringConstants {
+    // image system icon
+    static let info = "info"
+    static let plus = "plus"
+    static let chevronRight = "chevron.right"
+    
+    static let homeHeaderTextPrice = String(localized: "homeHeaderTextPrice")
+    static let homeHeaderTextPortfolio = String(localized: "homeHeaderTextPortfolio")
+}

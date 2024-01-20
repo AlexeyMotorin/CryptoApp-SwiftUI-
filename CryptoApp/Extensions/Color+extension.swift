@@ -14,7 +14,7 @@ extension Color {
 struct CryptoColor {
     let accent = Color("AccentColor")
     let background = Color("BackgroundColor")
-    let green = Color("GreenColor")
-    let red = Color("RedColor")
+    let green = Color("GreenCrypto")
+    let red = Color("RedCrypto")
     let secondaryText = Color("SecondaryTextColor")
 }
