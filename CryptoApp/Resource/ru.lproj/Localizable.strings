@@ -8,3 +8,6 @@
 
 homeHeaderTextPrice = "Текущие цены";
 homeHeaderTextPortfolio = "Портфолио";
+coin = "Монета";
+holding = "Владелец";
+price = "Цена";

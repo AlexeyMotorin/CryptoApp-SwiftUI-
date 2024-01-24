@@ -8,3 +8,6 @@
 
 homeHeaderTextPrice = "Live prices";
 homeHeaderTextPortfolio = "Portfolio";
+coin = "Coin";
+holding = "Holdings";
+price = "Price";
