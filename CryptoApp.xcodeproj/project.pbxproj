@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B041EA42B628ADD005DD847 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B041EA32B628ADD005DD847 /* NetworkingManager.swift */; };
 		5B4D61152B5BF72700E8B77F /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D61142B5BF72700E8B77F /* CoinRowView.swift */; };
 		5B4D61172B5BF77D00E8B77F /* PreviewProvider+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D61162B5BF77D00E8B77F /* PreviewProvider+extension.swift */; };
 		5B4D61192B5BFBBC00E8B77F /* Double+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D61182B5BFBBC00E8B77F /* Double+extension.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B041EA32B628ADD005DD847 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		5B4D61142B5BF72700E8B77F /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
 		5B4D61162B5BF77D00E8B77F /* PreviewProvider+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreviewProvider+extension.swift"; sourceTree = "<group>"; };
 		5B4D61182B5BFBBC00E8B77F /* Double+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+extension.swift"; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				5BD74AF72B626BEC009B929C /* CoinDataService.swift */,
+				5B041EA32B628ADD005DD847 /* NetworkingManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				5BEC48E52B5BB486006417FE /* Color+extension.swift in Sources */,
 				5BA0CDCF2B61344400D91630 /* HomeViewModel.swift in Sources */,
 				5BEC48EF2B5BB9C1006417FE /* CircleButtonView.swift in Sources */,
+				5B041EA42B628ADD005DD847 /* NetworkingManager.swift in Sources */,
 				5BEC48CF2B5BB152006417FE /* CryptoAppApp.swift in Sources */,
 				5BD74AFA2B626CB0009B929C /* Constants.swift in Sources */,
 				5B4D61192B5BFBBC00E8B77F /* Double+extension.swift in Sources */,
