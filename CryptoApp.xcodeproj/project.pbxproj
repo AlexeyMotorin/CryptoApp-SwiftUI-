@@ -12,6 +12,8 @@
 		5B4D61192B5BFBBC00E8B77F /* Double+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D61182B5BFBBC00E8B77F /* Double+extension.swift */; };
 		5BA0CDCF2B61344400D91630 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA0CDCE2B61344400D91630 /* HomeViewModel.swift */; };
 		5BBB91142B5BD4A700876D30 /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBB91132B5BD4A700876D30 /* CoinModel.swift */; };
+		5BD74AF82B626BEC009B929C /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD74AF72B626BEC009B929C /* CoinDataService.swift */; };
+		5BD74AFA2B626CB0009B929C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD74AF92B626CB0009B929C /* Constants.swift */; };
 		5BEC48CF2B5BB152006417FE /* CryptoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC48CE2B5BB152006417FE /* CryptoAppApp.swift */; };
 		5BEC48D12B5BB152006417FE /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC48D02B5BB152006417FE /* RootView.swift */; };
 		5BEC48D32B5BB153006417FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BEC48D22B5BB153006417FE /* Assets.xcassets */; };
@@ -30,6 +32,8 @@
 		5B4D61182B5BFBBC00E8B77F /* Double+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+extension.swift"; sourceTree = "<group>"; };
 		5BA0CDCE2B61344400D91630 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		5BBB91132B5BD4A700876D30 /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
+		5BD74AF72B626BEC009B929C /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
+		5BD74AF92B626CB0009B929C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5BEC48CB2B5BB152006417FE /* CryptoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BEC48CE2B5BB152006417FE /* CryptoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAppApp.swift; sourceTree = "<group>"; };
 		5BEC48D02B5BB152006417FE /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -61,6 +65,14 @@
 				5BBB91132B5BD4A700876D30 /* CoinModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5BD74AF62B626B55009B929C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5BD74AF72B626BEC009B929C /* CoinDataService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		5BEC48C22B5BB152006417FE = {
@@ -107,6 +119,7 @@
 				5BEC48D22B5BB153006417FE /* Assets.xcassets */,
 				5BEC48E02B5BB301006417FE /* Localizable.strings */,
 				5BEC48F02B5BBCBD006417FE /* L10.swift */,
+				5BD74AF92B626CB0009B929C /* Constants.swift */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -124,6 +137,7 @@
 		5BEC48E62B5BB7F6006417FE /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				5BD74AF62B626B55009B929C /* Services */,
 				5BEC48EC2B5BB98D006417FE /* Components */,
 				5BEC48E72B5BB80F006417FE /* HomeFlow */,
 			);
@@ -249,11 +263,13 @@
 				5BEC48EB2B5BB84A006417FE /* HomeView.swift in Sources */,
 				5BEC48F12B5BBCBD006417FE /* L10.swift in Sources */,
 				5BBB91142B5BD4A700876D30 /* CoinModel.swift in Sources */,
+				5BD74AF82B626BEC009B929C /* CoinDataService.swift in Sources */,
 				5B4D61172B5BF77D00E8B77F /* PreviewProvider+extension.swift in Sources */,
 				5BEC48E52B5BB486006417FE /* Color+extension.swift in Sources */,
 				5BA0CDCF2B61344400D91630 /* HomeViewModel.swift in Sources */,
 				5BEC48EF2B5BB9C1006417FE /* CircleButtonView.swift in Sources */,
 				5BEC48CF2B5BB152006417FE /* CryptoAppApp.swift in Sources */,
+				5BD74AFA2B626CB0009B929C /* Constants.swift in Sources */,
 				5B4D61192B5BFBBC00E8B77F /* Double+extension.swift in Sources */,
 				5B4D61152B5BF72700E8B77F /* CoinRowView.swift in Sources */,
 			);
