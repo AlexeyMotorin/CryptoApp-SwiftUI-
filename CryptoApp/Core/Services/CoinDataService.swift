@@ -11,7 +11,7 @@ import Combine
 final class CoinDataService {
     @Published var allCoins: [CoinModel] = []
 
-    var coinSubscription: AnyCancellable?
+    private var coinSubscription: AnyCancellable?
 
     init() {
         getCoins()

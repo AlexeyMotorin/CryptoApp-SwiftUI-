@@ -12,7 +12,8 @@ struct L10 {
     static let info = "info"
     static let plus = "plus"
     static let chevronRight = "chevron.right"
-    
+    static let questionmark = "questionmark"
+
     static let homeHeaderTextPrice = String(localized: "homeHeaderTextPrice")
     static let homeHeaderTextPortfolio = String(localized: "homeHeaderTextPortfolio")
     static let coinTitle = String(localized: "coin")
