@@ -11,3 +11,4 @@ homeHeaderTextPortfolio = "Портфолио";
 coin = "Монета";
 holding = "Владелец";
 price = "Цена";
+searchBarPlaceholder = "Искать по имени или символу...";

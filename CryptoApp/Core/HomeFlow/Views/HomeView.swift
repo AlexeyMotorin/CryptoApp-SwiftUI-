@@ -22,7 +22,7 @@ struct HomeView: View {
             // content layer
             VStack {
                 homeViewHeader
-
+                SearchBarView(searchText: $viewModel.searchText)
                 columnsTitle
 
                 if !showPortfolio {
@@ -37,6 +37,8 @@ struct HomeView: View {
 
                 Spacer(minLength: 0)
             }
+            .hideKeyboardWhenTappedAround()
+            .hideKeyboardWhenScrolling()
         }
     }
 }

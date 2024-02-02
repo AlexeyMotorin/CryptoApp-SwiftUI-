@@ -11,3 +11,4 @@ homeHeaderTextPortfolio = "Portfolio";
 coin = "Coin";
 holding = "Holdings";
 price = "Price";
+searchBarPlaceholder = "Search by name or symbol...";
