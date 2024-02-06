@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5B041EA42B628ADD005DD847 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B041EA32B628ADD005DD847 /* NetworkingManager.swift */; };
+		5B3761A62B72521200357FAE /* StatisticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3761A52B72521200357FAE /* StatisticModel.swift */; };
+		5B3761A82B72538200357FAE /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3761A72B72538200357FAE /* StatisticView.swift */; };
+		5B3761AA2B7257BF00357FAE /* HomeStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3761A92B7257BF00357FAE /* HomeStatsView.swift */; };
 		5B46798F2B6CFD5800DE32E6 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B46798E2B6CFD5800DE32E6 /* SearchBarView.swift */; };
 		5B4679912B6D099E00DE32E6 /* HideKeybordWhenScrollingModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4679902B6D099E00DE32E6 /* HideKeybordWhenScrollingModifier.swift */; };
 		5B4679932B6D09C500DE32E6 /* UIApplication+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4679922B6D09C500DE32E6 /* UIApplication+extension.swift */; };
@@ -36,6 +39,9 @@
 
 /* Begin PBXFileReference section */
 		5B041EA32B628ADD005DD847 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		5B3761A52B72521200357FAE /* StatisticModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticModel.swift; sourceTree = "<group>"; };
+		5B3761A72B72538200357FAE /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
+		5B3761A92B7257BF00357FAE /* HomeStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStatsView.swift; sourceTree = "<group>"; };
 		5B46798E2B6CFD5800DE32E6 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		5B4679902B6D099E00DE32E6 /* HideKeybordWhenScrollingModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeybordWhenScrollingModifier.swift; sourceTree = "<group>"; };
 		5B4679922B6D09C500DE32E6 /* UIApplication+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+extension.swift"; sourceTree = "<group>"; };
@@ -97,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				5BBB91132B5BD4A700876D30 /* CoinModel.swift */,
+				5B3761A52B72521200357FAE /* StatisticModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -204,6 +211,7 @@
 			children = (
 				5BEC48EA2B5BB84A006417FE /* HomeView.swift */,
 				5B4D61142B5BF72700E8B77F /* CoinRowView.swift */,
+				5B3761A92B7257BF00357FAE /* HomeStatsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -214,6 +222,7 @@
 				5BAC1AA12B64F3CD00E59BF6 /* CoinImage */,
 				5BEC48ED2B5BB9A7006417FE /* CircleButtton */,
 				5B46798E2B6CFD5800DE32E6 /* SearchBarView.swift */,
+				5B3761A72B72538200357FAE /* StatisticView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -299,8 +308,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B46798F2B6CFD5800DE32E6 /* SearchBarView.swift in Sources */,
+				5B3761A82B72538200357FAE /* StatisticView.swift in Sources */,
 				5BEC48D12B5BB152006417FE /* RootView.swift in Sources */,
 				5BEC48F32B5BC1BC006417FE /* CircleButtonAnimationView.swift in Sources */,
+				5B3761AA2B7257BF00357FAE /* HomeStatsView.swift in Sources */,
 				5BEC48EB2B5BB84A006417FE /* HomeView.swift in Sources */,
 				5BEC48F12B5BBCBD006417FE /* L10.swift in Sources */,
 				5BBB91142B5BD4A700876D30 /* CoinModel.swift in Sources */,
@@ -310,6 +321,7 @@
 				5BAC1AA32B64F61800E59BF6 /* CoinImageService.swift in Sources */,
 				5B4D61172B5BF77D00E8B77F /* PreviewProvider+extension.swift in Sources */,
 				5BAC1AA62B64F85800E59BF6 /* CoinImageViewModel.swift in Sources */,
+				5B3761A62B72521200357FAE /* StatisticModel.swift in Sources */,
 				5BEC48E52B5BB486006417FE /* Color+extension.swift in Sources */,
 				5BA0CDCF2B61344400D91630 /* HomeViewModel.swift in Sources */,
 				5BEC48EF2B5BB9C1006417FE /* CircleButtonView.swift in Sources */,

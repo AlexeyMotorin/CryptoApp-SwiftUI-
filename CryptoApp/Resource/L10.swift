@@ -15,6 +15,7 @@ struct L10 {
     static let questionmark = "questionmark"
     static let magnifyingglass = "magnifyingglass"
     static let xmarkCircleFill = "xmark.circle.fill"
+    static let triangleFill = "triangle.fill"
 
     static let homeHeaderTextPrice = String(localized: "homeHeaderTextPrice")
     static let homeHeaderTextPortfolio = String(localized: "homeHeaderTextPortfolio")
