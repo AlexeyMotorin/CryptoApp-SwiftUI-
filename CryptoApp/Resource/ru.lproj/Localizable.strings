@@ -12,3 +12,7 @@ coin = "Монета";
 holding = "Владелец";
 price = "Цена";
 searchBarPlaceholder = "Искать по имени или символу...";
+marketCap = "Рыночная капитализация";
+totalVolume = "24-часовой объем";
+btcDominance = "Доминация Биткоина";
+portfolio = "Стоимость портфеля";

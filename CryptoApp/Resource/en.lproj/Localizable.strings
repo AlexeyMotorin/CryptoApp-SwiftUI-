@@ -12,3 +12,7 @@ coin = "Coin";
 holding = "Holdings";
 price = "Price";
 searchBarPlaceholder = "Search by name or symbol...";
+marketCap = "Market Cap";
+totalVolume = "24H Volume";
+btcDominance = "BTC Dominance";
+portfolio = "Portfolio Value";

@@ -23,4 +23,8 @@ struct L10 {
     static let holdingTitle = String(localized: "holding")
     static let priceTitle = String(localized: "price")
     static let searchBarPlaceholder = String(localized: "searchBarPlaceholder")
+    static let marketCap = String(localized: "marketCap")
+    static let totalVolume = String(localized: "totalVolume")
+    static let btcDominance = String(localized: "btcDominance")
+    static let portfolio = String(localized: "portfolio")
 }

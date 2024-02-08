@@ -17,6 +17,8 @@
 		5B4D61152B5BF72700E8B77F /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D61142B5BF72700E8B77F /* CoinRowView.swift */; };
 		5B4D61172B5BF77D00E8B77F /* PreviewProvider+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D61162B5BF77D00E8B77F /* PreviewProvider+extension.swift */; };
 		5B4D61192B5BFBBC00E8B77F /* Double+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D61182B5BFBBC00E8B77F /* Double+extension.swift */; };
+		5B4F6EB92B739FBE0004CBFA /* MarketDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4F6EB82B739FBE0004CBFA /* MarketDataModel.swift */; };
+		5B4F6EBB2B73A3630004CBFA /* MarketDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4F6EBA2B73A3630004CBFA /* MarketDataService.swift */; };
 		5BA0CDCF2B61344400D91630 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA0CDCE2B61344400D91630 /* HomeViewModel.swift */; };
 		5BAC1AA02B64F3C300E59BF6 /* CoinImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAC1A9F2B64F3C300E59BF6 /* CoinImageView.swift */; };
 		5BAC1AA32B64F61800E59BF6 /* CoinImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAC1AA22B64F61800E59BF6 /* CoinImageService.swift */; };
@@ -48,6 +50,8 @@
 		5B4D61142B5BF72700E8B77F /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
 		5B4D61162B5BF77D00E8B77F /* PreviewProvider+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreviewProvider+extension.swift"; sourceTree = "<group>"; };
 		5B4D61182B5BFBBC00E8B77F /* Double+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+extension.swift"; sourceTree = "<group>"; };
+		5B4F6EB82B739FBE0004CBFA /* MarketDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDataModel.swift; sourceTree = "<group>"; };
+		5B4F6EBA2B73A3630004CBFA /* MarketDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDataService.swift; sourceTree = "<group>"; };
 		5BA0CDCE2B61344400D91630 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		5BAC1A9F2B64F3C300E59BF6 /* CoinImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageView.swift; sourceTree = "<group>"; };
 		5BAC1AA22B64F61800E59BF6 /* CoinImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageService.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 			children = (
 				5BBB91132B5BD4A700876D30 /* CoinModel.swift */,
 				5B3761A52B72521200357FAE /* StatisticModel.swift */,
+				5B4F6EB82B739FBE0004CBFA /* MarketDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 			children = (
 				5BD74AF72B626BEC009B929C /* CoinDataService.swift */,
 				5BAC1AA22B64F61800E59BF6 /* CoinImageService.swift */,
+				5B4F6EBA2B73A3630004CBFA /* MarketDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -318,6 +324,7 @@
 				5BAC1AA02B64F3C300E59BF6 /* CoinImageView.swift in Sources */,
 				5BEB30022B6512A00014ECC9 /* LocalFileManager.swift in Sources */,
 				5BD74AF82B626BEC009B929C /* CoinDataService.swift in Sources */,
+				5B4F6EBB2B73A3630004CBFA /* MarketDataService.swift in Sources */,
 				5BAC1AA32B64F61800E59BF6 /* CoinImageService.swift in Sources */,
 				5B4D61172B5BF77D00E8B77F /* PreviewProvider+extension.swift in Sources */,
 				5BAC1AA62B64F85800E59BF6 /* CoinImageViewModel.swift in Sources */,
@@ -326,6 +333,7 @@
 				5BA0CDCF2B61344400D91630 /* HomeViewModel.swift in Sources */,
 				5BEC48EF2B5BB9C1006417FE /* CircleButtonView.swift in Sources */,
 				5B4679912B6D099E00DE32E6 /* HideKeybordWhenScrollingModifier.swift in Sources */,
+				5B4F6EB92B739FBE0004CBFA /* MarketDataModel.swift in Sources */,
 				5B4679932B6D09C500DE32E6 /* UIApplication+extension.swift in Sources */,
 				5B041EA42B628ADD005DD847 /* NetworkingManager.swift in Sources */,
 				5BEC48CF2B5BB152006417FE /* CryptoAppApp.swift in Sources */,
