@@ -15,6 +15,8 @@ struct L10 {
     static let questionmark = "questionmark"
     static let magnifyingglass = "magnifyingglass"
     static let xmarkCircleFill = "xmark.circle.fill"
+    static let xmark = "xmark"
+    static let checkMark = "checkmark"
     static let triangleFill = "triangle.fill"
 
     static let homeHeaderTextPrice = String(localized: "homeHeaderTextPrice")
@@ -27,4 +29,15 @@ struct L10 {
     static let totalVolume = String(localized: "totalVolume")
     static let btcDominance = String(localized: "btcDominance")
     static let portfolio = String(localized: "portfolio")
+
+    // PortfolioView
+    static let portfolioViewTitle = String(localized: "EditPortfolio")
+    static let saveButtonTitle = String(localized: "save")
+    static let amountHolding = String(localized: "amountHolding")
+    static let currentValue = String(localized: "currentValue")
+    static let placeholderAmountHolding = String(localized: "placeholderAmountHolding")
+    static func currentPriceOf(_ value: String?) -> String {
+        let localizedString = NSLocalizedString("currentPriceOf", comment: "")
+        return String(format: localizedString, value ?? "")
+    }
 }
