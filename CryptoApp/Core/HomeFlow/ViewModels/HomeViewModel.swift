@@ -10,12 +10,7 @@ import Combine
 
 final class HomeViewModel: ObservableObject {
 
-    @Published var statistics: [StatisticModel] = [
-        StatisticModel(title: "Title", value: "Value"),
-        StatisticModel(title: "Title", value: "Value", percentageChange: 1),
-        StatisticModel(title: "Title", value: "Value"),
-        StatisticModel(title: "Title", value: "Value", percentageChange: -7)
-    ]
+    @Published var statistics: [StatisticModel] = []
 
     @Published var allCoins: [CoinModel] = []
     @Published var portfolioCoins: [CoinModel] = []
@@ -36,6 +31,7 @@ final class HomeViewModel: ObservableObject {
     }
 }
 
+// MARK: Private methods
 private extension HomeViewModel {
     func addSubscribers() {
         // update addCoins
@@ -48,26 +44,21 @@ private extension HomeViewModel {
             }
             .store(in: &cancelable)
 
-        // updates marketData
-        marketDataService.$marketData
-            .map(mapMarketGlobalData)
-            .sink { [weak self] (returnedStats) in
-                self?.statistics = returnedStats
-            }
-            .store(in: &cancelable)
-
         // updates portfolioCoins
         $allCoins
             .combineLatest(portfolioDataService.$savedEntities)
-            .map { (coinModel, portfolioEntities) -> [CoinModel] in
-                coinModel
-                    .compactMap { (coin) -> CoinModel? in
-                        guard let entity = portfolioEntities.first(where: { $0.coinId == coin.id }) else { return nil }
-                        return coin.updateHoldings(amount: entity.amount)
-                    }
-            }
+            .map(mapAllCoinsToPortfolioCoins)
             .sink { [weak self] (returnedCoins) in
                 self?.portfolioCoins = returnedCoins
+            }
+            .store(in: &cancelable)
+
+        // updates marketData
+        marketDataService.$marketData
+            .combineLatest($portfolioCoins)
+            .map(mapMarketGlobalData)
+            .sink { [weak self] (returnedStats) in
+                self?.statistics = returnedStats
             }
             .store(in: &cancelable)
     }
@@ -83,14 +74,40 @@ private extension HomeViewModel {
         }
     }
 
-    func mapMarketGlobalData(data: MarketDataModel?) -> [StatisticModel] {
+    func mapAllCoinsToPortfolioCoins(allCoins: [CoinModel], portfolioCoins: [PortfolioEntity]) -> [CoinModel] {
+        allCoins
+            .compactMap { (coin) -> CoinModel? in
+                guard let entity = portfolioCoins.first(where: { $0.coinId == coin.id }) else { return nil }
+                return coin.updateHoldings(amount: entity.amount)
+            }
+    }
+
+    func mapMarketGlobalData(data: MarketDataModel?, portfolioCoins: [CoinModel]) -> [StatisticModel] {
         var stats: [StatisticModel] = []
         guard let data = data else { return stats }
 
         let marketCup = StatisticModel(title: L10.marketCap, value: data.marketCap, percentageChange: data.marketCapChangePercentage24HUsd)
         let volume = StatisticModel(title: L10.totalVolume, value: data.volume)
         let btcDominance = StatisticModel(title: L10.btcDominance, value: data.btcDominance)
-        let portfolio = StatisticModel(title: L10.portfolio, value: "$0.00", percentageChange: 0)
+
+        let portfolioValue = portfolioCoins
+            .map { $0.currentHoldingsValue }
+            .reduce(0, +)
+
+        let previousValue = portfolioCoins
+            .map { (coin) -> Double in
+                let currentValue = coin.currentHoldingsValue
+                let percentChange = (coin.priceChangePercentage24H ?? 0) / 100
+                return currentValue / (1 + percentChange)
+            }
+            .reduce(0, +)
+
+        let percentageChange = ((portfolioValue - previousValue) / previousValue) * 100
+
+        let portfolio = StatisticModel(
+            title: L10.portfolio,
+            value: portfolioValue.asCurrencyWith2Decimals(),
+            percentageChange: percentageChange)
 
         stats.append(contentsOf: [
             marketCup,
