@@ -11,10 +11,9 @@ import Combine
 final class HomeViewModel: ObservableObject {
 
     @Published var statistics: [StatisticModel] = []
-
     @Published var allCoins: [CoinModel] = []
     @Published var portfolioCoins: [CoinModel] = []
-
+    @Published var isLoading = false
     @Published var searchText = ""
 
     private let coinDataService = CoinDataService()
@@ -26,8 +25,16 @@ final class HomeViewModel: ObservableObject {
         addSubscribers()
     }
 
+    // MARK: Public methods
     func updatesPortfolio(coin: CoinModel, amount: Double) {
         portfolioDataService.updatePortfolio(coin: coin, amount: amount)
+    }
+
+    func reloadData() {
+        isLoading = true
+        coinDataService.getCoins()
+        marketDataService.getData()
+        HapticManager.shared.notification(type: .success)
     }
 }
 
@@ -59,6 +66,7 @@ private extension HomeViewModel {
             .map(mapMarketGlobalData)
             .sink { [weak self] (returnedStats) in
                 self?.statistics = returnedStats
+                self?.isLoading = false 
             }
             .store(in: &cancelable)
     }

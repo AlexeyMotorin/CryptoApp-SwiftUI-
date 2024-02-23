@@ -16,9 +16,7 @@ final class MarketDataService {
     init() {
         getData()
     }
-}
 
-private extension MarketDataService {
     func getData() {
         guard let url = URL(string: marketDataURLString) else { return }
 

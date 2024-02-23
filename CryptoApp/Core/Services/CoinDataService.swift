@@ -17,9 +17,6 @@ final class CoinDataService {
         getCoins()
     }
 
-}
-
-private extension CoinDataService {
     func getCoins() {
         guard let url = URL(string: coingeckoUrlString) else { return }
 

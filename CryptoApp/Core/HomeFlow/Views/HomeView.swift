@@ -29,7 +29,7 @@ struct HomeView: View {
                 homeViewHeader
                 HomeStatsView(showPortfolio: $showPortfolio)
                 SearchBarView(searchText: $viewModel.searchText)
-                columnsTitle
+                columnsTitles
 
                 if !showPortfolio {
                     allCoinsList
@@ -99,7 +99,7 @@ private extension HomeView {
         .listStyle(.plain)
     }
 
-    var columnsTitle: some View {
+    var columnsTitles: some View {
         HStack {
             Text(L10.coinTitle)
             Spacer()
@@ -108,6 +108,15 @@ private extension HomeView {
             }
             Text(L10.priceTitle)
                 .frame(width: UIScreen.main.bounds.width / 3.5, alignment: .trailing)
+
+            Button(action: {
+                withAnimation(.linear(duration: 2.0)) {
+                    viewModel.reloadData()
+                }
+            }, label: {
+                Image(systemName: L10.refreshImage)
+            })
+            .rotationEffect(Angle(degrees: viewModel.isLoading ? 360 : 0), anchor: .center)
         }
         .font(.caption)
         .foregroundColor(Color.theme.secondaryText)
