@@ -101,13 +101,45 @@ private extension HomeView {
 
     var columnsTitles: some View {
         HStack {
-            Text(L10.coinTitle)
+            HStack(spacing: 4) {
+                Text(L10.coinTitle)
+                Image(systemName: L10.chevronDown)
+                    .opacity(viewModel.sortType == .rank || viewModel.sortType == .rankReversed ? 1 : 0)
+                    .rotationEffect(Angle(degrees: viewModel.sortType == .rank ? 0 : 180))
+            }
+            .onTapGesture {
+                withAnimation {
+                    viewModel.sortType = viewModel.sortType == .rank ? .rankReversed : .rank
+                }
+            }
+
             Spacer()
             if showPortfolio {
-                Text(L10.holdingTitle)
+                HStack(spacing: 4) {
+                    Text(L10.holdingTitle)
+                    Image(systemName: L10.chevronDown)
+                        .opacity(viewModel.sortType == .holdings || viewModel.sortType == .holdingReversed ? 1 : 0)
+                        .rotationEffect(Angle(degrees: viewModel.sortType == .holdings ? 0 : 180))
+                }
+                .onTapGesture {
+                    withAnimation {
+                        viewModel.sortType = viewModel.sortType == .holdings ? .holdingReversed : .holdings
+                    }
+                }
             }
-            Text(L10.priceTitle)
-                .frame(width: UIScreen.main.bounds.width / 3.5, alignment: .trailing)
+
+            HStack(spacing: 4) {
+                Text(L10.priceTitle)
+                Image(systemName: L10.chevronDown)
+                    .opacity(viewModel.sortType == .price || viewModel.sortType == .priceReversed ? 1 : 0)
+                    .rotationEffect(Angle(degrees: viewModel.sortType == .price ? 0 : 180))
+            }
+            .frame(width: UIScreen.main.bounds.width / 3.5, alignment: .trailing)
+            .onTapGesture {
+                withAnimation {
+                    viewModel.sortType = viewModel.sortType == .price ? .priceReversed : .price
+                }
+            }
 
             Button(action: {
                 withAnimation(.linear(duration: 2.0)) {

@@ -19,6 +19,7 @@ struct L10 {
     static let checkMark = "checkmark"
     static let triangleFill = "triangle.fill"
     static let refreshImage = "goforward"
+    static let chevronDown = "chevron.down"
 
     static let homeHeaderTextPrice = String(localized: "homeHeaderTextPrice")
     static let homeHeaderTextPortfolio = String(localized: "homeHeaderTextPortfolio")
