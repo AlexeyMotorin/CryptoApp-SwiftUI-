@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5B041EA42B628ADD005DD847 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B041EA32B628ADD005DD847 /* NetworkingManager.swift */; };
 		5B1383252B7B7B5E00A21BC2 /* CoinLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1383242B7B7B5E00A21BC2 /* CoinLogoView.swift */; };
+		5B22F9832B8B1FB1007A1664 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B22F9822B8B1FB1007A1664 /* DetailView.swift */; };
+		5B22F9852B8B257F007A1664 /* DetailViewLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B22F9842B8B257F007A1664 /* DetailViewLoading.swift */; };
 		5B3761A62B72521200357FAE /* StatisticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3761A52B72521200357FAE /* StatisticModel.swift */; };
 		5B3761A82B72538200357FAE /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3761A72B72538200357FAE /* StatisticView.swift */; };
 		5B3761AA2B7257BF00357FAE /* HomeStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3761A92B7257BF00357FAE /* HomeStatsView.swift */; };
@@ -48,6 +50,8 @@
 /* Begin PBXFileReference section */
 		5B041EA32B628ADD005DD847 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		5B1383242B7B7B5E00A21BC2 /* CoinLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinLogoView.swift; sourceTree = "<group>"; };
+		5B22F9822B8B1FB1007A1664 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		5B22F9842B8B257F007A1664 /* DetailViewLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewLoading.swift; sourceTree = "<group>"; };
 		5B3761A52B72521200357FAE /* StatisticModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticModel.swift; sourceTree = "<group>"; };
 		5B3761A72B72538200357FAE /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
 		5B3761A92B7257BF00357FAE /* HomeStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStatsView.swift; sourceTree = "<group>"; };
@@ -97,6 +101,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B22F97E2B8B1F52007A1664 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5BEC48E92B5BB82B006417FE /* Views */,
+				5BEC48E82B5BB823006417FE /* ViewModels */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5B22F97F2B8B1F64007A1664 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				5B22F9802B8B1F81007A1664 /* Views */,
+				5B22F9812B8B1F88007A1664 /* ViewModels */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		5B22F9802B8B1F81007A1664 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5B22F9822B8B1FB1007A1664 /* DetailView.swift */,
+				5B22F9842B8B257F007A1664 /* DetailViewLoading.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5B22F9812B8B1F88007A1664 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		5BAC1AA12B64F3CD00E59BF6 /* CoinImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,8 +252,8 @@
 		5BEC48E72B5BB80F006417FE /* HomeFlow */ = {
 			isa = PBXGroup;
 			children = (
-				5BEC48E92B5BB82B006417FE /* Views */,
-				5BEC48E82B5BB823006417FE /* ViewModels */,
+				5B22F97E2B8B1F52007A1664 /* Home */,
+				5B22F97F2B8B1F64007A1664 /* Details */,
 			);
 			path = HomeFlow;
 			sourceTree = "<group>";
@@ -331,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B22F9852B8B257F007A1664 /* DetailViewLoading.swift in Sources */,
 				5B46798F2B6CFD5800DE32E6 /* SearchBarView.swift in Sources */,
 				5B3761A82B72538200357FAE /* StatisticView.swift in Sources */,
 				5BEC48D12B5BB152006417FE /* RootView.swift in Sources */,
@@ -350,6 +389,7 @@
 				5BEC48E52B5BB486006417FE /* Color+extension.swift in Sources */,
 				5BA0CDCF2B61344400D91630 /* HomeViewModel.swift in Sources */,
 				5BEC48EF2B5BB9C1006417FE /* CircleButtonView.swift in Sources */,
+				5B22F9832B8B1FB1007A1664 /* DetailView.swift in Sources */,
 				5BE17CEF2B889BF00043B96B /* HapticManager.swift in Sources */,
 				5B4679912B6D099E00DE32E6 /* HideKeybordWhenScrollingModifier.swift in Sources */,
 				5B4F6EB92B739FBE0004CBFA /* MarketDataModel.swift in Sources */,

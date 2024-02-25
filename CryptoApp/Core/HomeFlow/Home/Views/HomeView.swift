@@ -14,6 +14,9 @@ struct HomeView: View {
     @State private var showPortfolio = true // animate right
     @State private var showPortfolioView = false // new sheet
 
+    @State private var selectCoin: CoinModel? = nil
+    @State private var showDetailView = false
+
     var body: some View {
         ZStack {
             // background layer
@@ -42,6 +45,12 @@ struct HomeView: View {
                 }
 
                 Spacer(minLength: 0)
+            }
+            .background {
+                NavigationLink(
+                    destination: DetailViewLoading(coin: $selectCoin),
+                    isActive: $showDetailView,
+                    label: { EmptyView() })
             }
             .hideKeyboardWhenTappedAround()
             .hideKeyboardWhenScrolling()
@@ -83,8 +92,11 @@ private extension HomeView {
 
     var allCoinsList: some View {
         List {
-            ForEach(viewModel.allCoins) {
-                CoinRowView(coin: $0, showHoldingsColumn: false)
+            ForEach(viewModel.allCoins) { coin in
+                CoinRowView(coin: coin, showHoldingsColumn: false)
+                    .onTapGesture {
+                        segue(coin: coin)
+                    }
             }
         }
         .listStyle(.plain)
@@ -92,8 +104,11 @@ private extension HomeView {
 
     var portfolioCoinsList: some View {
         List {
-            ForEach(viewModel.portfolioCoins) {
-                CoinRowView(coin: $0, showHoldingsColumn: true)
+            ForEach(viewModel.portfolioCoins) { coin in
+                CoinRowView(coin: coin, showHoldingsColumn: true)
+                    .onTapGesture {
+                        segue(coin: coin)
+                    }
             }
         }
         .listStyle(.plain)
@@ -153,6 +168,14 @@ private extension HomeView {
         .font(.caption)
         .foregroundColor(Color.theme.secondaryText)
         .padding(.horizontal)
+    }
+}
+
+// MARK: Methods
+private extension HomeView {
+    func segue(coin: CoinModel) {
+        selectCoin = coin
+        showDetailView.toggle()
     }
 }
 

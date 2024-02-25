@@ -18,6 +18,9 @@ struct CoinRowView: View {
             if showHoldingsColumn { centerColumn }
             rightColumn
         }
+        .background {
+            Color.theme.background.opacity(0.001)
+        }
         .font(.subheadline)
     }
 }
