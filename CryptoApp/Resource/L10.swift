@@ -42,4 +42,18 @@ struct L10 {
         let localizedString = NSLocalizedString("currentPriceOf", comment: "")
         return String(format: localizedString, value ?? "")
     }
+
+    // DetailView
+    static let currentPrice = String(localized: "currentPrice")
+    static let marketCapitalization = String(localized: "marketCapitalization")
+    static let rank = String(localized: "rank")
+    static let volume = String(localized: "volume")
+    static let high24 = String(localized: "high24")
+    static let low24 = String(localized: "low24")
+    static let hashingAlgorithm = String(localized: "Hashing Algorithm")
+    static let blockTime = String(localized: "blockTime")
+    static let marketCapChange24 = String(localized: "marketCapChange")
+    static let priceChange24 = String(localized: "priceChange24")
+    static let overview = String(localized: "overview")
+    static let additionalDetails = String(localized: "additionalDetails")
 }

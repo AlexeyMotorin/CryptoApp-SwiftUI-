@@ -18,7 +18,7 @@ struct DetailViewLoading: View {
 
     var body: some View {
         if let coin {
-            DetailView(coinId: coin.id)
+            DetailView(coin: coin)
         }
     }
 }
